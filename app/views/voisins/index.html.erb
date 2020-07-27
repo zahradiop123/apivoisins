@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Voisins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>About</th>
+      <th>Favory</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @voisins.each do |voisin| %>
+      <tr>
+        <td><%= voisin.name %></td>
+        <td><%= voisin.phone %></td>
+        <td><%= voisin.address %></td>
+        <td><%= voisin.about %></td>
+        <td><%= voisin.favory %></td>
+        <td><%= link_to 'Show', voisin %></td>
+        <td><%= link_to 'Edit', edit_voisin_path(voisin) %></td>
+        <td><%= link_to 'Destroy', voisin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Voisin', new_voisin_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @voisin.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @voisin.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @voisin.address %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @voisin.about %>
+</p>
+
+<p>
+  <strong>Favory:</strong>
+  <%= @voisin.favory %>
+</p>
+
+<%= link_to 'Edit', edit_voisin_path(@voisin) %> |
+<%= link_to 'Back', voisins_path %>
